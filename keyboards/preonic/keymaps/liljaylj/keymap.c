@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [SYSTEM] = LAYOUT_preonic_grid(
         _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    _______,
-        _______,    MU_TOG,     NK_ON,      NK_OFF,     XXXXXXX,    XXXXXXX,    MU_TOG,     MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR,
+        _______,    MU_TOG,     NK_ON,      NK_OFF,     RESET,      XXXXXXX,    MU_TOG,     MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR,
         _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
         _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    VRSN,       XXXXXXX,    NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
         _______,    _______,    _______,    XXXXXXX,    XXXXXXX,    _______,    _______,    DM_PLY1,    DM_PLY2,    _______,    _______,    _______
