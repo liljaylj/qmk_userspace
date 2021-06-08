@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [SYSTEM] = LAYOUT_moonlander(
         _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RESET,                                  RESET,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    _______,
-        _______,    MU_TOG,     NK_ON,      NK_OFF,     XXXXXXX,    XXXXXXX,    EEP_RST,                                EEP_RST,        MU_TOG,     MU_MOD,     LED_LEVEL,  XXXXXXX,    KC_BRK,     KC_PWR,
+        _______,    MU_TOG,     NK_ON,      NK_OFF,     RESET,      XXXXXXX,    EEP_RST,                                EEP_RST,        MU_TOG,     MU_MOD,     LED_LEVEL,  XXXXXXX,    KC_BRK,     KC_PWR,
         _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    WEBUSB_PAIR,                            WEBUSB_PAIR,    AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
         _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    VRSN,       XXXXXXX,                                                            NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
         _______,    _______,    _______,    XXXXXXX,    XXXXXXX,                        _______,                RGB_TOG,                            DM_PLY1,    DM_PLY2,    _______,    _______,    _______,
