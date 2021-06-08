@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MT(MOD_HYPR,KC_ESC),    KC_A,           KC_S,       KC_D,           KC_F,       KC_G,   XXXXXXX,                                        XXXXXXX,    KC_H,       KC_J,       KC_K,       KC_L,       LT(1,KC_SCLN),      LT(2,KC_QUOTE),
         KC_LSFT,                LCTL_T(KC_Z),   KC_X,       KC_C,           KC_V,       KC_B,                                                               KC_N,       KC_M,       KC_COMM,    KC_DOT,     RCTL_T(KC_SLSH),    RSFT_T(KC_ENT),
         LCTL_T(KC_HOME),        KC_LGUI,        KC_LALT,    TT(SYMBOLS),    TT(MEDIA),                  TT(SYSTEM),             LCTL_T(KC_APP),             KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,            RCTL_T(KC_END),
-                                                                        RGUI_T(KC_SPC),     KC_BSPC,    KC_ENT,                 KC_SPC, KC_TAB, LGUI_T(KC_ENT)
+                                                                        KC_SPC,     KC_BSPC,    RGUI_T(KC_ENT),                 LGUI_T(KC_SPC), KC_TAB, KC_ENT
     ),
 
 
