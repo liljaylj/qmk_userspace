@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RESET,                                  RESET,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    _______,
         _______,    MU_TOG,     NK_ON,      NK_OFF,     XXXXXXX,    XXXXXXX,    EEP_RST,                                EEP_RST,        MU_TOG,     MU_MOD,     LED_LEVEL,  XXXXXXX,    KC_BRK,     KC_PWR,
         _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    WEBUSB_PAIR,                            WEBUSB_PAIR,    AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
-        _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,                                                            NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
+        _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    VRSN,       XXXXXXX,                                                            NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
         _______,    _______,    _______,    XXXXXXX,    XXXXXXX,                        _______,                RGB_TOG,                            DM_PLY1,    DM_PLY2,    _______,    _______,    _______,
                                                                 RGB_HUI,    RGB_HUD,    RGB_SAD,                RGB_SAI,    RGB_VAD,    RGB_VAI
     ),
@@ -88,14 +88,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-        switch (keycode) {
-            case VRSN:
-                SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-                return false;
-            case RGB_SLD:
-                rgblight_mode(1);
-                return false;
+    switch (keycode) {
+    case VRSN:
+        if (record->event.pressed) {
+            SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+            return false;
         }
     }
     return true;
