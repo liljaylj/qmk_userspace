@@ -36,8 +36,8 @@ enum {
 };
 
 #define SYSGRV              LT(SYSTEM,KC_GRV)
-#define MEHTAB              MT(MOD_MEH,KC_TAB)
-#define HYPRESC             MT(MOD_HYPR,KC_ESC)
+#define MEHTAB              MEH_T(KC_TAB)
+#define HYPRESC             HYPR_T(KC_ESC)
 #define LCTLZ               LCTL_T(KC_Z)
 #define LCTLHOM             LCTL_T(KC_HOME)
 #define RCTLSLSH            RCTL_T(KC_SLSH)
