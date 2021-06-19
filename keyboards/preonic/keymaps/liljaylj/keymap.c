@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MEDIA] = LAYOUT_preonic_grid(
         XXXXXXX,    XXXXXXX,    KC_BTN4,    KC_BTN3,    KC_BTN5,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
-        _______,    XXXXXXX,    KC_BTN2,    KC_MS_U,    KC_BTN1,    KC_WH_U,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_MRWD,    KC_MFFD,    XXXXXXX,
+        _______,    KC_F15,     KC_BTN2,    KC_MS_U,    KC_BTN1,    KC_WH_U,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_MRWD,    KC_MFFD,    XXXXXXX,
         _______,    XXXXXXX,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_D,    KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    KC_MPLY,    _______,
         _______,    KC_BRID,    KC_BRIU,    KC_F14,     KC_WH_L,    KC_WH_R,    KC_MSTP,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______,
         _______,    _______,    _______,    KC_FIND,    _______,    _______,    _______,    KC_MPRV,    KC_MNXT,    _______,    _______,    _______
