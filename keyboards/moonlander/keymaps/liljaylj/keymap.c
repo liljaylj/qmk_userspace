@@ -24,6 +24,7 @@ enum layers {
     SYMBOLS,    // symbols
     MEDIA,      // media keys
     SYSTEM,     // system
+    GAMING,     // gaming
 };
 
 enum custom_keycodes {
@@ -87,10 +88,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYSTEM] = LAYOUT_moonlander(
         _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RESET,                                  RESET,      XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    _______,
         _______,    MU_TOG,     NK_ON,      NK_OFF,     RESET,      XXXXXXX,    EEP_RST,                                EEP_RST,    MU_TOG,     MU_MOD,     LED_LEVEL,  XXXXXXX,    KC_BRK,     KC_PWR,
-        _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    WEBUSB_PAIR,                            WUPAIR,     AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
+        _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    TO(GAMING), WEBUSB_PAIR,                            WUPAIR,     AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
         _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    VRSN,       XXXXXXX,                                                        NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
         _______,    _______,    _______,    XXXXXXX,    XXXXXXX,                        _______,                RGB_TOG,                        DM_PLY1,    DM_PLY2,    _______,    _______,    _______,
                                                                 RGB_HUI,    RGB_HUD,    RGB_SAD,                RGB_SAI,    RGB_VAD,    RGB_VAI
+    ),
+
+    [GAMING] = LAYOUT_moonlander(
+        KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,   XXXXXXX,                                    XXXXXXX,    KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC,
+        KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,   XXXXXXX,                                    XXXXXXX,    KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLS,
+        KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,   XXXXXXX,                                    XXXXXXX,    KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
+        KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                                                           KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT,
+        KC_LCTL,    KC_LGUI,    KC_LALT,    TO(BASE),   XXXXXXX,                        TT(SYSTEM),             LCTL_T(KC_APP),                 KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    KC_RCTL,
+                                                                KC_SPC,     KC_BSPC,    RGUI_T(KC_ENT),         LGUI_T(KC_SPC), KC_TAB, KC_ENT
     ),
 
 };
