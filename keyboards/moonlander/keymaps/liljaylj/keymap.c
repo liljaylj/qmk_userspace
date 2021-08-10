@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    KC_MINS,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_PGDN,    XXXXXXX,                                XXXXXXX,    KC_PSLS,    KC_P4,      KC_P5,      KC_P6,      _______,    KC_PMNS,
         _______,    KC_UNDS,    KC_PLUS,    KC_LBRC,    KC_RBRC,    KC_INS,                                                         TDENEQ,     KC_P1,      KC_P2,      KC_P3,      KC_NLCK,    _______,
         _______,    _______,    _______,    _______,    KC_CAPS,                        _______,                _______,                        KC_P0,      KC_PDOT,    _______,    _______,    _______,
-                                                                _______,    _______,    _______,                _______,    _______,    _______
+                                                                _______,    KC_DEL,     _______,                _______,    _______,    _______
     ),
 
     [MEDIA] = LAYOUT_moonlander(
