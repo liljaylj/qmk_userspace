@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MEHTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,   XXXXXXX,                                    XXXXXXX,    KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLASH,
         HYPRESC,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,   XXXXXXX,                                    XXXXXXX,    KC_H,       KC_J,       KC_K,       KC_L,       SYMSCLN,    MEDQUOT,
         KC_LSFT,    LCTLZ,      KC_X,       KC_C,       KC_V,       KC_B,                                                           KC_N,       KC_M,       KC_COMM,    KC_DOT,     RCTLSLSH,   RSFTENT,
-        LCTLHOM,    KC_LGUI,    KC_LALT,    TTSYM,      TTMED,                          TT(SYSTEM),             LCTL_T(KC_APP),                 KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    RCTLEND,
+        LCTLHOM,    KC_LGUI,    KC_LALT,    TTSYM,      TTMED,                          TT(SYSTEM),             LCTL_T(KC_FIND),                KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    RCTLEND,
                                                                 KC_SPC,     KC_BSPC,    RGUI_T(KC_ENT),         LGUI_T(KC_SPC), KC_TAB, KC_ENT
     ),
 
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    KC_F15,     KC_BTN2,    KC_MS_U,    KC_BTN1,    KC_WH_U,    XXXXXXX,                                XXXXXXX,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_MRWD,    KC_MFFD,    XXXXXXX,
         _______,    XXXXXXX,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_D,    XXXXXXX,                                XXXXXXX,    KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    KC_MPLY,    _______,
         _______,    KC_BRID,    KC_BRIU,    KC_F14,     KC_WH_L,    KC_WH_R,                                                        KC_MSTP,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______,
-        _______,    _______,    _______,    KC_FIND,    _______,                        XXXXXXX,                _______,                        KC_MPRV,    KC_MNXT,    _______,    _______,    _______,
+        _______,    _______,    _______,    KC_APP,     _______,                        XXXXXXX,                _______,                        KC_MPRV,    KC_MNXT,    _______,    _______,    _______,
                                                                 KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,             _______,    _______,    _______
     ),
 
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,   XXXXXXX,                                    XXXXXXX,    KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLS,
         KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,   XXXXXXX,                                    XXXXXXX,    KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
         KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                                                           KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT,
-        KC_LCTL,    KC_LGUI,    KC_LALT,    TO(BASE),   XXXXXXX,                        TT(SYSTEM),             LCTL_T(KC_APP),                 KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    KC_RCTL,
+        KC_LCTL,    KC_LGUI,    KC_LALT,    TO(BASE),   XXXXXXX,                        TT(SYSTEM),             LCTL_T(KC_FIND),                KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    KC_RCTL,
                                                                 KC_SPC,     KC_BSPC,    RGUI_T(KC_ENT),         LGUI_T(KC_SPC), KC_TAB, KC_ENT
     ),
 
