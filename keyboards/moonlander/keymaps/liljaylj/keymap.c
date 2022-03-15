@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [BASE] = LAYOUT_moonlander(
         SYSGRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,   XXXXXXX,                                    XXXXXXX,    KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       SYSBSPC,
-        MEHTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,   XXXXXXX,                                    XXXXXXX,    KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLASH,
+        MEHTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,   XXXXXXX,                                    XXXXXXX,    KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLS,
         HYPRESC,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,   XXXXXXX,                                    XXXXXXX,    KC_H,       KC_J,       KC_K,       KC_L,       SYMSCLN,    MEDQUOT,
         KC_LSFT,    LCTLZ,      KC_X,       KC_C,       KC_V,       KC_B,                                                           KC_N,       KC_M,       KC_COMM,    KC_DOT,     RCTLSLSH,   RSFTENT,
         LCTLHOM,    KC_LGUI,    KC_LALT,    TTSYM,      TTMED,                          TT(SYSTEM),             LCTL_T(KC_FIND),                KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    RCTLEND,
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    KC_F11,     KC_F12,     KC_LCBR,    KC_RCBR,    KC_PGUP,    XXXXXXX,                                XXXXXXX,    KC_PAST,    KC_P7,      KC_P8,      KC_P9,      KC_SLCK,    KC_PPLS,
         _______,    KC_MINS,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_PGDN,    XXXXXXX,                                XXXXXXX,    KC_PSLS,    KC_P4,      KC_P5,      KC_P6,      _______,    KC_PMNS,
         _______,    KC_UNDS,    KC_PLUS,    KC_LBRC,    KC_RBRC,    KC_INS,                                                         TDENEQ,     KC_P1,      KC_P2,      KC_P3,      KC_NLCK,    _______,
-        _______,    _______,    _______,    _______,    KC_CAPS,                        _______,                _______,                        KC_P0,      KC_PDOT,    _______,    _______,    _______,
+        KC_LCTL,    _______,    _______,    _______,    KC_CAPS,                        _______,                _______,                        KC_P0,      KC_PDOT,    _______,    _______,    KC_RCTL,
                                                                 _______,    KC_DEL,     _______,                _______,    _______,    _______
     ),
 
