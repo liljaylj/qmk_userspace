@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    KC_F11,     KC_F12,     KC_LCBR,    KC_RCBR,    KC_PGUP,    KC_PAST,    KC_P7,      KC_P8,      KC_P9,      KC_SLCK,    KC_PPLS,
         _______,    KC_MINS,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_PGDN,    KC_PSLS,    KC_P4,      KC_P5,      KC_P6,      _______,    KC_PMNS,
         _______,    KC_UNDS,    KC_PLUS,    KC_LBRC,    KC_RBRC,    KC_INS,     TDENEQ,     KC_P1,      KC_P2,      KC_P3,      KC_NLCK,    _______,
-        KC_LCTL,    _______,    _______,    _______,    KC_CAPS,          _______,          KC_P0,      KC_PDOT,    _______,    _______,    KC_RCTL
+        _______,    _______,    _______,    _______,    KC_CAPS,          _______,          KC_P0,      KC_PDOT,    _______,    _______,    _______
     ),
 
     [MEDIA] = LAYOUT_preonic_1x2uC(
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    MU_TOG,     NK_ON,      NK_OFF,     RESET,      XXXXXXX,    MU_TOG,     MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR,
         _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    TO(GAMING), AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
         _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    VRSN,       XXXXXXX,    NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
-        _______,    _______,    _______,    XXXXXXX,    XXXXXXX,          _______,          DM_PLY1,    DM_PLY2,    _______,    _______,    _______
+        KC_LCTL,    _______,    _______,    XXXXXXX,    XXXXXXX,          _______,          DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL
     ),
 
     [GAMING] = LAYOUT_preonic_1x2uC(
