@@ -20,10 +20,11 @@
 
 enum layers {
     BASE,       // default layer
+    BARE,       // gaming
+    LOCK,       // lock keyboard
     SYMBOLS,    // symbols
     MEDIA,      // media keys
     SYSTEM,     // system
-    GAMING,     // gaming
 };
 
 enum custom_keycodes {
@@ -61,6 +62,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LCTLHOM,    KC_LGUI,    KC_LALT,    TTSYM,      TTMED,            KC_SPC,           KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    RCTLEND
     ),
 
+    [BARE] = LAYOUT_preonic_1x2uC(
+        SYSGRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,       KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       SYSBSPC,
+        KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,       KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLS,
+        KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,       KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
+        KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT,
+        KC_LCTL,    KC_LGUI,    KC_LALT,    XXXXXXX,    XXXXXXX,          KC_SPC,           KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    KC_RCTL
+    ),
+
+    [LOCK] = LAYOUT_preonic_1x2uC(
+        TT(SYSTEM), XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    TT(SYSTEM),
+        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,          XXXXXXX,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
+    ),
+
     [SYMBOLS] = LAYOUT_preonic_1x2uC(
         XXXXXXX,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_DEL,
         _______,    KC_F11,     KC_F12,     KC_LCBR,    KC_RCBR,    KC_PGUP,    KC_PAST,    KC_P7,      KC_P8,      KC_P9,      KC_SLCK,    KC_PPLS,
@@ -79,18 +96,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [SYSTEM] = LAYOUT_preonic_1x2uC(
         _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    _______,
-        _______,    MU_TOG,     NK_ON,      NK_OFF,     RESET,      XXXXXXX,    MU_TOG,     MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR,
-        _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    TO(GAMING), AU_ON,      AU_OFF,     XXXXXXX,    XXXXXXX,    KC_WAKE,    KC_SLEP,
-        _______,    CK_TOGG,    XXXXXXX,    XXXXXXX,    VRSN,       XXXXXXX,    NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
+        _______,    MU_TOG,     NK_ON,      NK_OFF,     QK_BOOT,    XXXXXXX,    MU_TOG,     MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR,
+        _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    TG(BARE),   AU_ON,      AU_OFF,     XXXXXXX,    TG(LOCK),   KC_WAKE,    KC_SLEP,
+        _______,    CK_TOGG,    XXXXXXX,    QK_MAKE,    VRSN,       QK_RBT,     NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
         KC_LCTL,    _______,    _______,    XXXXXXX,    XXXXXXX,          _______,          DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL
-    ),
-
-    [GAMING] = LAYOUT_preonic_1x2uC(
-        KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,       KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC,
-        KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,       KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSLS,
-        KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,       KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
-        KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT,
-        KC_LCTL,    KC_LGUI,    KC_LALT,    TO(BASE),   XXXXXXX,          KC_SPC,           KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    KC_RCTL
     ),
 
 };
