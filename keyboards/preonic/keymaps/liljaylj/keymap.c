@@ -18,6 +18,15 @@
 #include "muse.h"
 #include "version.h"
 
+typedef union {
+    uint32_t raw;
+    struct {
+        bool auto_shift_enabled :1;
+    };
+} user_config_t;
+
+user_config_t user_config;
+
 enum layers {
     BASE,       // default layer
     BARE,       // gaming
@@ -97,12 +106,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYSTEM] = LAYOUT_preonic_1x2uC(
         _______,    KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_1,       KC_2,       KC_3,       KC_4,       KC_5,       _______,
         _______,    MU_TOG,     NK_ON,      NK_OFF,     QK_BOOT,    XXXXXXX,    MU_TOG,     MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR,
-        _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    TG(BARE),   AU_ON,      AU_OFF,     XXXXXXX,    TG(LOCK),   KC_WAKE,    KC_SLEP,
+        _______,    AU_TOG,     KC_ASON,    KC_ASOFF,   KC_ASRP,    TG(BARE),   AU_ON,      AU_OFF,     XXXXXXX,    TG(LOCK),   KC_WAKE,    KC_SLEP,
         _______,    CK_TOGG,    XXXXXXX,    QK_MAKE,    VRSN,       QK_RBT,     NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
-        KC_LCTL,    _______,    _______,    XXXXXXX,    XXXXXXX,          _______,          DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL
+        KC_LCTL,    _______,    _______,    KC_ASDN,    KC_ASUP,          _______,          DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL
     ),
 
 };
+
+void eeconfig_init_user(void) {
+    // reset EEPROM
+    user_config.raw = 0;
+    user_config.auto_shift_enabled = false;
+    eeconfig_update_user(user_config.raw);
+
+    autoshift_disable();
+}
+
+void keyboard_post_init_user(void) {
+    // read EEPROM
+    user_config.raw = eeconfig_read_user();
+
+    if (user_config.auto_shift_enabled) {
+        autoshift_enable();
+    }
+    else {
+        autoshift_disable();
+    }
+}
+
+bool get_custom_autoshifted_key(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LCTLZ:
+            return true;
+    }
+    return false;
+}
 
 qk_tap_dance_action_t tap_dance_actions[] = {
     // 1 - KC_PENT, 2 - KC_PEQL
@@ -111,11 +149,20 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case VRSN:
-        if (record->event.pressed) {
-            SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-            return true;
-        }
+        case VRSN:
+            if (record->event.pressed) {
+                SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+                return false;
+            }
+            break;
+        case KC_ASON:
+        case KC_ASOFF:
+            if (record->event.pressed) {
+                user_config.auto_shift_enabled = keycode == KC_ASON;
+                eeconfig_update_user(user_config.raw);
+                return true;
+            }
+            break;
     }
     return true;
 }

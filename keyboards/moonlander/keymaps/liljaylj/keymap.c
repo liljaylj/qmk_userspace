@@ -19,6 +19,16 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
+// EEPROM
+typedef union {
+    uint32_t raw;
+    struct {
+        bool auto_shift_enabled :1;
+    };
+} user_config_t;
+
+user_config_t user_config;
+
 enum layers {
     BASE,       // default layer
     BARE,       // gaming
@@ -107,18 +117,45 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYSTEM] = LAYOUT_moonlander(
         _______,    KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       QK_BOOT,                                QK_BOOT,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5,       _______,
         _______,    MU_TOG,     NK_ON,      NK_OFF,     QK_BOOT,    XXXXXXX,    QK_RBT,                                 QK_RBT,     MU_TOG,     MU_MOD,     LED_LEVEL,  XXXXXXX,    KC_BRK,     KC_PWR,
-        _______,    AU_TOG,     XXXXXXX,    XXXXXXX,    XXXXXXX,    TG(BARE),   WUPAIR,                                 WUPAIR,     AU_ON,      AU_OFF,     XXXXXXX,    TG(LOCK),   KC_WAKE,    KC_SLEP,
+        _______,    AU_TOG,     KC_ASON,    KC_ASOFF,   KC_ASRP,    TG(BARE),   WUPAIR,                                 WUPAIR,     AU_ON,      AU_OFF,     XXXXXXX,    TG(LOCK),   KC_WAKE,    KC_SLEP,
         _______,    CK_TOGG,    XXXXXXX,    QK_MAKE,    VRSN,       QK_RBT,                                                         NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    XXXXXXX,    _______,
-        KC_LCTL,    _______,    _______,    XXXXXXX,    XXXXXXX,                        _______,                RGB_TOG,                        DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL,
+        KC_LCTL,    _______,    _______,    KC_ASDN,    KC_ASUP,                        _______,                RGB_TOG,                        DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL,
                                                                 RGB_HUI,    RGB_HUD,    RGB_SAD,                RGB_SAI,    RGB_VAD,    RGB_VAI
     ),
 
 };
 
+void eeconfig_init_user(void) {
+    // reset EEPROM
+    user_config.raw = 0;
+    user_config.auto_shift_enabled = false;
+    eeconfig_update_user(user_config.raw);
+
+    autoshift_disable();
+}
+
 void keyboard_post_init_user(void) {
+    // read EEPROM
+    user_config.raw = eeconfig_read_user();
+
     /* rgb_matrix_mode_noeeprom(RGB_MATRIX_RAINDROPS); */
     rgb_matrix_enable();
     rgb_matrix_mode(RGB_MATRIX_JELLYBEAN_RAINDROPS);
+
+    if (user_config.auto_shift_enabled) {
+        autoshift_enable();
+    }
+    else {
+        autoshift_disable();
+    }
+}
+
+bool get_custom_autoshifted_key(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LCTLZ:
+            return true;
+    }
+    return false;
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -128,11 +165,20 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case VRSN:
-        if (record->event.pressed) {
-            SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-            return false;
-        }
+        case VRSN:
+            if (record->event.pressed) {
+                SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+                return false;
+            }
+            break;
+        case KC_ASON:
+        case KC_ASOFF:
+            if (record->event.pressed) {
+                user_config.auto_shift_enabled = keycode == KC_ASON;
+                eeconfig_update_user(user_config.raw);
+                return true;
+            }
+            break;
     }
     return true;
 }
