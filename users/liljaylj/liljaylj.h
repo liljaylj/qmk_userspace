@@ -3,15 +3,9 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
-#ifdef KEYBOARD_moonlander
-#   define OLD_SAFE_RANGE ML_SAFE_RANGE
-#else
-#   define OLD_SAFE_RANGE SAFE_RANGE
-#endif
-
 enum custom_keycodes {
-    VRSN = OLD_SAFE_RANGE,
-    NEW_SAFE_RANGE,
+    VRSN = QK_USER,
+    USER_SAFE_RANGE,
 };
 
 // EEPROM
@@ -126,7 +120,7 @@ enum {
 #define _____________________________SYSTEM_L5_________________                 KC_LCTL,    _______,    _______,    AS_DOWN,    AS_UP
 
 #define _____________________________SYSTEM_R1_____________________________     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,       _______
-#define _____________________________SYSTEM_R2_____________________________     MU_TOGG,    MU_MOD,     XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR
+#define _____________________________SYSTEM_R2_____________________________     MU_TOGG,    MU_NEXT,    XXXXXXX,    XXXXXXX,    KC_BRK,     KC_PWR
 #define _____________________________SYSTEM_R3_____________________________     AU_ON,      AU_OFF,     XXXXXXX,    TG(LOCK),   KC_WAKE,    KC_SLEP
 #define _____________________________SYSTEM_R4_____________________________     NK_TOGG,    DM_REC1,    DM_REC2,    DM_RSTP,    KC_SYRQ,    _______
 #define             _________________SYSTEM_R5_____________________________                 DM_PLY1,    DM_PLY2,    _______,    _______,    KC_RCTL

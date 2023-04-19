@@ -52,7 +52,7 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
 }
 #endif
 
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     // 1 - KC_PENT, 2 - KC_PEQL
     [TD_PENT_PEQL] = ACTION_TAP_DANCE_DOUBLE(KC_PENT, KC_PEQL),
 };
