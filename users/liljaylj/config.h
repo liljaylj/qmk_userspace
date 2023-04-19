@@ -45,3 +45,7 @@
 #define RETRO_SHIFT 2000
 
 #define DEBOUNCE 5
+
+#ifdef AUDIO_ENABLE
+#   define AUDIO_INIT_DELAY
+#endif
