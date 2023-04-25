@@ -1,7 +1,5 @@
 #pragma once
 
-#define AUDIO_CLICKY
-
 #define MUSIC_MASK (keycode != KC_NO)
 
 /*
