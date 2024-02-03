@@ -31,35 +31,46 @@ enum {
     TD_PENT_PEQL,
 };
 
+// shorter aliases
 #define SYSGRV              LT(SYSTEM,KC_GRV)
 #define MEHTAB              MEH_T(KC_TAB)
 #define HYPRESC             HYPR_T(KC_ESC)
+// home row mod-tap keys
 #define LSFTA               LSFT_T(KC_A)
-#define LCTLZ               LCTL_T(KC_Z)
+#define LCTLS               LCTL_T(KC_S)
+#define LGUID               LGUI_T(KC_D)
+#define LALTF               LALT_T(KC_F)
+#define RSFTSCLN            RSFT_T(KC_SCLN)
+#define RCTLL               RCTL_T(KC_L)
+#define RGUIK               RGUI_T(KC_K)
+#define RALTJ               RALT_T(KC_J)
+// (left/right) ctrls as (home/end) on tap
 #define LCTLHOM             LCTL_T(KC_HOME)
-#define RSFTSCLN            LSFT_T(KC_SCLN)
-#define RCTLSLSH            RCTL_T(KC_SLSH)
 #define RCTLEND             RCTL_T(KC_END)
+// right shift as enter on tap
 #define RSFTENT             RSFT_T(KC_ENT)
 
+// layer switch mod-tap keys
 #define SYMQUOT             LT(SYMBOLS,KC_QUOTE)
 #define MEDBSLS             LT(MEDIA, KC_BSLS)
 #define SYSBSPC             LT(SYSTEM,KC_BSPC)
+// layer switch
 #define TTSYM               TT(SYMBOLS)
 #define TTMED               TT(MEDIA)
 
+// tap-dance keys
 #define TDENEQ              TD(TD_PENT_PEQL)
 
 #define ______________________________BASE_L1______________________________     SYSGRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
 #define ______________________________BASE_L2______________________________     MEHTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
-#define ______________________________BASE_L3______________________________     HYPRESC,    LSFTA,      KC_S,       KC_D,       KC_F,       KC_G
-#define ______________________________BASE_L4______________________________     KC_LSFT,    LCTLZ,      KC_X,       KC_C,       KC_V,       KC_B
+#define ______________________________BASE_L3______________________________     HYPRESC,    LSFTA,      LCTLS,      LGUID,      LALTF,      KC_G
+#define ______________________________BASE_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B
 #define ______________________________BASE_L5__________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TTSYM,      TTMED
 
 #define ______________________________BASE_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       SYSBSPC
 #define ______________________________BASE_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       MEDBSLS
-#define ______________________________BASE_R3______________________________     KC_H,       KC_J,       KC_K,       KC_L,       RSFTSCLN,   SYMQUOT
-#define ______________________________BASE_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     RCTLSLSH,   RSFTENT
+#define ______________________________BASE_R3______________________________     KC_H,       RALTJ,      RGUIK,      RCTLL,      RSFTSCLN,   SYMQUOT
+#define ______________________________BASE_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT
 #define             __________________BASE_R5______________________________                 KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    RCTLEND
 
 
