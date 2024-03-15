@@ -69,18 +69,6 @@ user_config_t user_config;
 // middle button(s) function on SYS layer
 #define SYSMID              KC_MPLY
 
-#define _______________________________3L_L1_______________________________     KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
-#define _______________________________3L_L2_______________________________     SYSESC,     KC_Q,       KC_F,       KC_U,       KC_Y,       KC_Z
-#define _______________________________3L_L3_______________________________     KC_TAB,     LSFTO,      LCTLH,      LGUIE,      LALTA,      KC_I
-#define _______________________________3L_L4_______________________________     KC_LSFT,    KC_COMM,    KC_M,       KC_DOT,     KC_J,       KC_SCLN
-#define _______________________________3L_L5___________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
-
-#define _______________________________3L_R1_______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
-#define _______________________________3L_R2_______________________________     KC_X,       KC_K,       KC_C,       KC_W,       KC_B,       SYSBSLS
-#define _______________________________3L_R3_______________________________     KC_D,       RALTR,      RGUIT,      RCTLN,      RSFTS,      TL_LOWR
-#define _______________________________3L_R4_______________________________     KC_G,       KC_L,       KC_P,       KC_V,       TL_UPPR,    RSFTENT
-#define             ___________________3L_R5_______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    RCTLEND
-
 
 #define ______________________________QWER_L1______________________________     KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
 #define ______________________________QWER_L2______________________________     SYSTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
@@ -93,6 +81,19 @@ user_config_t user_config;
 #define ______________________________QWER_R3______________________________     KC_H,       RALTJ,      RGUIK,      RCTLL,      RSFTSCLN,   SYMQUOT
 #define ______________________________QWER_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     CURSLSH,    RSFTENT
 #define             __________________QWER_R5______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    RCTLEND
+
+
+#define _______________________________3L_L1_______________________________     KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
+#define _______________________________3L_L2_______________________________     SYSESC,     KC_Q,       KC_F,       KC_U,       KC_Y,       KC_Z
+#define _______________________________3L_L3_______________________________     KC_TAB,     LSFTO,      LCTLH,      LGUIE,      LALTA,      KC_I
+#define _______________________________3L_L4_______________________________     KC_LSFT,    KC_COMM,    KC_M,       KC_DOT,     KC_J,       KC_SCLN
+#define _______________________________3L_L5___________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
+
+#define _______________________________3L_R1_______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
+#define _______________________________3L_R2_______________________________     KC_X,       KC_K,       KC_C,       KC_W,       KC_B,       SYSBSLS
+#define _______________________________3L_R3_______________________________     KC_D,       RALTR,      RGUIT,      RCTLN,      RSFTS,      TL_LOWR
+#define _______________________________3L_R4_______________________________     KC_G,       KC_L,       KC_P,       KC_V,       TL_UPPR,    RSFTENT
+#define             ___________________3L_R5_______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    RCTLEND
 
 
 #define ______________________________BARE_L1______________________________     ERABGRV,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5

@@ -1,8 +1,8 @@
 #pragma once
 
 // layers
-#define _3L     0
-#define QWER    1
+#define QWER    0
+#define _3L     1
 #define BARE    2
 #define ERAB    3
 #define SYM     4
