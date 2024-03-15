@@ -74,13 +74,13 @@ user_config_t user_config;
 #define ______________________________QWER_L2______________________________     SYSTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
 #define ______________________________QWER_L3______________________________     KC_ESC,     LSFTA,      LCTLS,      LGUID,      LALTF,      KC_G
 #define ______________________________QWER_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B
-#define ______________________________QWER_L5__________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
+#define ______________________________QWER_L5__________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    KC_QUOT,    KC_SLSH
 
 #define ______________________________QWER_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
 #define ______________________________QWER_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       SYSBSLS
-#define ______________________________QWER_R3______________________________     KC_H,       RALTJ,      RGUIK,      RCTLL,      RSFTSCLN,   SYMQUOT
-#define ______________________________QWER_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     CURSLSH,    RSFTENT
-#define             __________________QWER_R5______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    RCTLEND
+#define ______________________________QWER_R3______________________________     KC_H,       RALTJ,      RGUIK,      RCTLL,      RSFTSCLN,   KC_QUOT
+#define ______________________________QWER_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT
+#define             __________________QWER_R5______________________________                 KC_QUOT,    KC_SLSH,    KC_RALT,    KC_RGUI,    RCTLEND
 
 
 #define _______________________________3L_L1_______________________________     KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
@@ -91,8 +91,8 @@ user_config_t user_config;
 
 #define _______________________________3L_R1_______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
 #define _______________________________3L_R2_______________________________     KC_X,       KC_K,       KC_C,       KC_W,       KC_B,       SYSBSLS
-#define _______________________________3L_R3_______________________________     KC_D,       RALTR,      RGUIT,      RCTLN,      RSFTS,      TL_LOWR
-#define _______________________________3L_R4_______________________________     KC_G,       KC_L,       KC_P,       KC_V,       TL_UPPR,    RSFTENT
+#define _______________________________3L_R3_______________________________     KC_D,       RALTR,      RGUIT,      RCTLN,      RSFTS,      SYMQUOT
+#define _______________________________3L_R4_______________________________     KC_G,       KC_L,       KC_P,       KC_V,       CURSLSH,    RSFTENT
 #define             ___________________3L_R5_______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    RCTLEND
 
 
@@ -124,12 +124,12 @@ user_config_t user_config;
 
 #define _______________________________SYM_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
 #define _______________________________SYM_L2______________________________     _______,    KC_DQUO,    KC_UNDS,    KC_LBRC,    KC_RBRC,    KC_CIRC
-#define _______________________________SYM_L3______________________________     KC_CAPS,    KC_SLSH,    KC_MINS,    KC_LCBR,    KC_RCBR,    KC_ASTR
+#define _______________________________SYM_L3______________________________     _______,    KC_SLSH,    KC_MINS,    KC_LCBR,    KC_RCBR,    KC_ASTR
 #define _______________________________SYM_L4______________________________     _______,    KC_HASH,    KC_DLR,     KC_PIPE,    KC_TILD,    KC_GRV
 #define _______________________________SYM_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________SYM_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
-#define _______________________________SYM_R2______________________________     KC_EXLM,    KC_LT,      KC_GT,      KC_EQL,     KC_AMPR,    KC_SCRL
+#define _______________________________SYM_R2______________________________     KC_EXLM,    KC_LT,      KC_GT,      KC_EQL,     KC_AMPR,    _______
 #define _______________________________SYM_R3______________________________     KC_QUES,    KC_LPRN,    KC_RPRN,    KC_QUOT,    KC_COLN,    _______
 #define _______________________________SYM_R4______________________________     KC_PLUS,    KC_PERC,    KC_BSLS,    KC_AT,      KC_INS,     _______
 #define             ___________________SYM_R5______________________________                 _______,    _______,    _______,    _______,    _______
@@ -137,14 +137,14 @@ user_config_t user_config;
 
 #define _______________________________CUR_L1______________________________     KC_F13,     KC_F14,     KC_F15,     KC_F16,     KC_F17,     KC_F18
 #define _______________________________CUR_L2______________________________     _______,    KC_PGUP,    KC_BSPC,    KC_UP,      KC_DEL,     KC_PGDN
-#define _______________________________CUR_L3______________________________     KC_APP,     KC_HOME,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_END
+#define _______________________________CUR_L3______________________________     _______,    KC_HOME,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_END
 #define _______________________________CUR_L4______________________________     _______,    KC_PSLS,    KC_PAST,    KC_PMNS,    KC_PPLS,    KC_COMM
 #define _______________________________CUR_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________CUR_R1______________________________     KC_F19,     KC_F20,     KC_F21,     KC_F22,     KC_F23,     KC_F24
-#define _______________________________CUR_R2______________________________     XXXXXXX,    KC_P1,      KC_P2,      KC_P3,      KC_PEQL,    KC_NUM
+#define _______________________________CUR_R2______________________________     XXXXXXX,    KC_P1,      KC_P2,      KC_P3,      KC_PEQL,    _______
 #define _______________________________CUR_R3______________________________     KC_PDOT,    KC_P4,      KC_P5,      KC_P6,      KC_PENT,    _______
-#define _______________________________CUR_R4______________________________     KC_P0,      KC_P7,      KC_P8,      KC_P9,      XXXXXXX,    _______
+#define _______________________________CUR_R4______________________________     KC_P0,      KC_P7,      KC_P8,      KC_P9,      _______,    _______
 #define             ___________________CUR_R5______________________________                 _______,    _______,    _______,    _______,    _______
 
 
@@ -155,10 +155,10 @@ user_config_t user_config;
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
 #define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_SYRQ
-#define _______________________________SYS_R2______________________________     XXXXXXX,    KC_BRID,    KC_BRIU,    AU_TOGG,    KC_MPLY,    _______
-#define _______________________________SYS_R3______________________________     XXXXXXX,    XXXXXXX,    XXXXXXX,    TG(LOCK),   XXXXXXX,    KC_SLEP
+#define _______________________________SYS_R2______________________________     KC_BRID,    KC_BRIU,    KC_INS,     AU_TOGG,    KC_MPLY,    _______
+#define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   XXXXXXX,    KC_SLEP
 #define _______________________________SYS_R4______________________________     XXXXXXX,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______
-#define             ___________________SYS_R5______________________________                 KC_MPRV,    KC_MNXT,    _______,    _______,    KC_RCTL
+#define             ___________________SYS_R5______________________________                 KC_MPRV,    KC_MNXT,    _______,    _______,    _______
 
 
 #define ______________________________LOCK_L1______________________________     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
