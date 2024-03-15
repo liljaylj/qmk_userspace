@@ -1,5 +1,20 @@
 #pragma once
 
+// layers
+#define _3L     0
+#define QWER    1
+#define BARE    2
+#define ERAB    3
+#define SYM     4
+#define CUR     5
+#define SYS     6
+#define LOCK    7
+
+// tri layer
+#define TRI_LAYER_LOWER_LAYER   SYM
+#define TRI_LAYER_UPPER_LAYER   CUR
+#define TRI_LAYER_ADJUST_LAYER  SYS
+
 /*
  * MIDI options
  */

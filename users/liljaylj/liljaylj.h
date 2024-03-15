@@ -18,17 +18,6 @@ typedef union {
 
 user_config_t user_config;
 
-enum layers {
-    _3L,        // threelayout
-    QWER,       // qwerty
-    BARE,       // bare qwerty (for gaming)
-    ERAB,       // bare qwerty - right side (for gaming)
-    SYM,        // symbols
-    CUR,        // cursor, movement, etc.
-    SYS,        // system
-    LOCK,       // lock keyboard
-};
-
 // home row mod-tap keys
 #define LSFTA               LSFT_T(KC_A)
 #define LCTLS               LCTL_T(KC_S)
@@ -84,12 +73,12 @@ enum layers {
 #define _______________________________3L_L2_______________________________     SYSESC,     KC_Q,       KC_F,       KC_U,       KC_Y,       KC_Z
 #define _______________________________3L_L3_______________________________     KC_TAB,     LSFTO,      LCTLH,      LGUIE,      LALTA,      KC_I
 #define _______________________________3L_L4_______________________________     KC_LSFT,    KC_COMM,    KC_M,       KC_DOT,     KC_J,       KC_SCLN
-#define _______________________________3L_L5___________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TT(SYM),    TT(CUR)
+#define _______________________________3L_L5___________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
 
 #define _______________________________3L_R1_______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
 #define _______________________________3L_R2_______________________________     KC_X,       KC_K,       KC_C,       KC_W,       KC_B,       SYSBSLS
-#define _______________________________3L_R3_______________________________     KC_D,       RALTR,      RGUIT,      RCTLN,      RSFTS,      TT(SYM)
-#define _______________________________3L_R4_______________________________     KC_G,       KC_L,       KC_P,       KC_V,       TT(CUR),    RSFTENT
+#define _______________________________3L_R3_______________________________     KC_D,       RALTR,      RGUIT,      RCTLN,      RSFTS,      TL_LOWR
+#define _______________________________3L_R4_______________________________     KC_G,       KC_L,       KC_P,       KC_V,       TL_UPPR,    RSFTENT
 #define             ___________________3L_R5_______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    RCTLEND
 
 
@@ -97,7 +86,7 @@ enum layers {
 #define ______________________________QWER_L2______________________________     SYSTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
 #define ______________________________QWER_L3______________________________     KC_ESC,     LSFTA,      LCTLS,      LGUID,      LALTF,      KC_G
 #define ______________________________QWER_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B
-#define ______________________________QWER_L5__________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TT(SYM),    TT(CUR)
+#define ______________________________QWER_L5__________________                 LCTLHOM,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
 
 #define ______________________________QWER_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
 #define ______________________________QWER_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       SYSBSLS
@@ -110,7 +99,7 @@ enum layers {
 #define ______________________________BARE_L2______________________________     _______,    KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
 #define ______________________________BARE_L3______________________________     KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G
 #define ______________________________BARE_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B
-#define ______________________________BARE_L5__________________                 KC_LCTL,    KC_LGUI,    KC_LALT,    TT(SYM),    TT(CUR)
+#define ______________________________BARE_L5__________________                 KC_LCTL,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
 
 #define ______________________________BARE_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       ERABBSPC
 #define ______________________________BARE_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       _______
@@ -129,14 +118,14 @@ enum layers {
 #define ______________________________ERAB_R2______________________________     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,       KC_TAB
 #define ______________________________ERAB_R3______________________________     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,       KC_ESC
 #define ______________________________ERAB_R4______________________________     KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_LSFT
-#define             __________________ERAB_R5______________________________                 TT(SYM),    TT(CUR),    KC_LGUI,    KC_LALT,    KC_LCTL
+#define             __________________ERAB_R5______________________________                 TL_LOWR,    TL_UPPR,    KC_LGUI,    KC_LALT,    KC_LCTL
 
 
 #define _______________________________SYM_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
 #define _______________________________SYM_L2______________________________     _______,    KC_DQUO,    KC_UNDS,    KC_LBRC,    KC_RBRC,    KC_CIRC
-#define _______________________________SYM_L3______________________________     _______,    KC_SLSH,    KC_MINS,    KC_LCBR,    KC_RCBR,    KC_ASTR
+#define _______________________________SYM_L3______________________________     KC_CAPS,    KC_SLSH,    KC_MINS,    KC_LCBR,    KC_RCBR,    KC_ASTR
 #define _______________________________SYM_L4______________________________     _______,    KC_HASH,    KC_DLR,     KC_PIPE,    KC_TILD,    KC_GRV
-#define _______________________________SYM_L5__________________                 _______,    _______,    _______,    _______,    KC_CAPS
+#define _______________________________SYM_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________SYM_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
 #define _______________________________SYM_R2______________________________     KC_EXLM,    KC_LT,      KC_GT,      KC_EQL,     KC_AMPR,    KC_SCRL
@@ -147,9 +136,9 @@ enum layers {
 
 #define _______________________________CUR_L1______________________________     KC_F13,     KC_F14,     KC_F15,     KC_F16,     KC_F17,     KC_F18
 #define _______________________________CUR_L2______________________________     _______,    KC_PGUP,    KC_BSPC,    KC_UP,      KC_DEL,     KC_PGDN
-#define _______________________________CUR_L3______________________________     _______,    KC_HOME,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_END
+#define _______________________________CUR_L3______________________________     KC_APP,     KC_HOME,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_END
 #define _______________________________CUR_L4______________________________     _______,    KC_PSLS,    KC_PAST,    KC_PMNS,    KC_PPLS,    KC_COMM
-#define _______________________________CUR_L5__________________                 _______,    _______,    _______,    KC_APP,     _______
+#define _______________________________CUR_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________CUR_R1______________________________     KC_F19,     KC_F20,     KC_F21,     KC_F22,     KC_F23,     KC_F24
 #define _______________________________CUR_R2______________________________     XXXXXXX,    KC_P1,      KC_P2,      KC_P3,      KC_PEQL,    KC_NUM
