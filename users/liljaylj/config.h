@@ -1,14 +1,14 @@
 #pragma once
 
 // layers
-#define QWER    0
-#define _3L     1
-#define BARE    2
-#define ERAB    3
-#define SYM     4
-#define CUR     5
-#define SYS     6
-#define LOCK    7
+#define QWER    0   // base: qwerty
+#define BARE    1   // base: qwerty without tap-holds
+
+#define ERAB    2   // mirror of BARE
+#define SYM     3   // symbols
+#define CUR     4   // cursor keys and numpad
+#define SYS     5   // system keys (qmk/media/etc.)
+#define LOCK    6   // lock the keyboard
 
 // tri layer
 #define TRI_LAYER_LOWER_LAYER   SYM
@@ -39,7 +39,8 @@
 #define TAPPING_TOGGLE 3
 #define TAPPING_TERM 200
 
-#define MOUSEKEY_INTERVAL           20
+#undef MOUSEKEY_INTERVAL  // workaround for mousekey redefined in moonlander.h
+#define MOUSEKEY_INTERVAL           10
 #define MOUSEKEY_DELAY              0
 #define MOUSEKEY_TIME_TO_MAX        60
 #define MOUSEKEY_MAX_SPEED          7
@@ -60,3 +61,5 @@
 #ifdef AUDIO_ENABLE
 #   define AUDIO_INIT_DELAY
 #endif
+
+#define CAPS_WORD_INVERT_ON_SHIFT
