@@ -126,7 +126,7 @@ user_config_t user_config;
 #define _______________________________SYS_L1______________________________     XXXXXXX,    XXXXXXX,    KC_BTN4,    KC_BTN3,    KC_BTN5,    XXXXXXX
 #define _______________________________SYS_L2______________________________     _______,    KC_WH_U,    KC_BTN2,    KC_MS_U,    KC_BTN1,    KC_WH_D
 #define _______________________________SYS_L3______________________________     XXXXXXX,    KC_WH_L,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_R
-#define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    XXXXXXX,    QK_BOOT
+#define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    VRSN,       QK_BOOT
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
 #define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_SYRQ
