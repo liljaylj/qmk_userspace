@@ -54,6 +54,10 @@ user_config_t user_config;
 // #define TDENEQ              TD(TD_PENT_PEQL)
 
 
+// middle button(s) function on SYM layer
+#define SYMMID              KC_MINS
+// middle button(s) function on CUR layer
+#define CURMID              KC_UNDS
 // middle button(s) function on SYS layer
 #define SYSMID              KC_MPLY
 
