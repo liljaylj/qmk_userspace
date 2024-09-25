@@ -63,3 +63,5 @@
 #endif
 
 #define CAPS_WORD_INVERT_ON_SHIFT
+
+#define ORYX_CONFIGURATOR
