@@ -52,11 +52,6 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
 }
 #endif
 
-tap_dance_action_t tap_dance_actions[] = {
-    // // 1 - KC_PENT, 2 - KC_PEQL
-    // [TD_PENT_PEQL] = ACTION_TAP_DANCE_DOUBLE(KC_PENT, KC_PEQL),
-};
-
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
     return true;

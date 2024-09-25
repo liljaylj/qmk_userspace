@@ -47,13 +47,6 @@ user_config_t user_config;
 #define ERABGRV             LT(ERAB,KC_GRV)
 #define ERABBSPC            LT(ERAB,KC_BSPC)
 
-// // tap-dance keys
-// enum {
-//     TD_PENT_PEQL,
-// };
-// #define TDENEQ              TD(TD_PENT_PEQL)
-
-
 // middle button(s) function on SYM layer
 #define SYMMID              _______
 // middle button(s) function on CUR layer
