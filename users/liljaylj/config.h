@@ -1,14 +1,14 @@
 #pragma once
 
 // layers
-#define QWER    0   // base: qwerty
-#define BARE    1   // base: qwerty without tap-holds
+#define QWER    0   // BASE: qwerty
+#define BARE    1   // BASE: qwerty without tap-holds
 
 #define ERAB    2   // mirror of BARE
 #define SYM     3   // symbols
 #define CUR     4   // cursor keys and numpad
-#define SYS     5   // system keys (qmk/media/etc.)
-#define LOCK    6   // lock the keyboard
+#define LOCK    5   // lock the keyboard
+#define SYS     6   // system keys (qmk/media/etc.)
 
 // tri layer
 #define TRI_LAYER_LOWER_LAYER   SYM
