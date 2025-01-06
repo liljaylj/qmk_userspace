@@ -69,13 +69,13 @@ user_config_t user_config;
 
 
 #define ______________________________BARE_L1______________________________     ERABGRV,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5
-#define ______________________________BARE_L2______________________________     _______,    KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
+#define ______________________________BARE_L2______________________________     TT(SYS),    KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
 #define ______________________________BARE_L3______________________________     KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G
 #define ______________________________BARE_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B
 #define ______________________________BARE_L5__________________                 KC_LCTL,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
 
 #define ______________________________BARE_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       ERABBSPC
-#define ______________________________BARE_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       _______
+#define ______________________________BARE_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       TT(SYS)
 #define ______________________________BARE_R3______________________________     KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT
 #define ______________________________BARE_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT
 #define             __________________BARE_R5______________________________                 KC_LBRC,    KC_RBRC,    KC_RALT,    KC_RGUI,    KC_RCTL
