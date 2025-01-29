@@ -59,10 +59,20 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case VRSN:
+        case X_VRSN:
             if (record->event.pressed) {
                 SEND_STRING (QMK_VERSION "-" QMK_GIT_HASH " (" QMK_BUILDDATE ")");
                 return false;
+            }
+            break;
+        case X_MMUTE:  // mic mute - shift+kc_mute, but with delay after modifier (https://github.com/qmk/qmk_firmware/issues/24612)
+            if (record->event.pressed) {
+                register_code(KC_LGUI);
+                wait_ms(5);
+                register_code(KC_MUTE);
+            } else {
+                unregister_code(KC_MUTE);
+                unregister_code(KC_LGUI);
             }
             break;
 #ifdef AUTO_SHIFT_ENABLE

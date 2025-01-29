@@ -4,8 +4,8 @@
 #include "version.h"
 
 enum custom_keycodes {
-    VRSN = QK_USER,
-    USER_SAFE_RANGE,
+    X_VRSN = SAFE_RANGE,
+    X_MMUTE,
 };
 
 // EEPROM
@@ -136,11 +136,11 @@ user_config_t user_config;
 #define _______________________________SYS_L1______________________________     XXXXXXX,    XXXXXXX,    KC_BTN4,    KC_BTN3,    KC_BTN5,    XXXXXXX
 #define _______________________________SYS_L2______________________________     _______,    KC_WH_U,    KC_BTN2,    KC_MS_U,    KC_BTN1,    KC_WH_D
 #define _______________________________SYS_L3______________________________     XXXXXXX,    KC_WH_L,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_R
-#define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    VRSN,       QK_BOOT
+#define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    X_VRSN,     QK_BOOT
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
 #define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_SYRQ
 #define _______________________________SYS_R2______________________________     KC_BRID,    KC_BRIU,    KC_INS,     AU_TOGG,    KC_MPLY,    _______
 #define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   XXXXXXX,    KC_SLEP
-#define _______________________________SYS_R4______________________________     XXXXXXX,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______
+#define _______________________________SYS_R4______________________________     X_MMUTE,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______
 #define             ___________________SYS_R5______________________________                 KC_MPRV,    KC_MNXT,    _______,    _______,    _______
