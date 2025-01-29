@@ -12,5 +12,6 @@ KEY_LOCK_ENABLE = yes
 TRI_LAYER_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 LAYER_LOCK_ENABLE = yes
+NKRO_ENABLE = yes
 
 SRC += $(USER_PATH)/liljaylj.c
