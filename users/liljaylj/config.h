@@ -37,7 +37,10 @@
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
 #define TAPPING_TOGGLE 3  // tap 3 times to switch to layer on TT maps
+
+/* tap-hold configuration */
 #define TAPPING_TERM 200
+#define FLOW_TAP_TERM 150
 
 #undef MOUSEKEY_INTERVAL  // workaround for mousekey redefined in moonlander.h
 #define MOUSEKEY_INTERVAL           10
