@@ -133,13 +133,13 @@ user_config_t user_config;
 #define             __________________LOCK_R5______________________________                 XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
 
 
-#define _______________________________SYS_L1______________________________     NK_ON,      XXXXXXX,    KC_BTN4,    KC_BTN3,    KC_BTN5,    XXXXXXX
-#define _______________________________SYS_L2______________________________     _______,    KC_WH_U,    KC_BTN2,    KC_MS_U,    KC_BTN1,    KC_WH_D
-#define _______________________________SYS_L3______________________________     NK_OFF,     KC_WH_L,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_R
+#define _______________________________SYS_L1______________________________     NK_ON,      XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
+#define _______________________________SYS_L2______________________________     _______,    MS_WHLU,    MS_BTN2,    MS_UP,      MS_BTN1,    MS_WHLD
+#define _______________________________SYS_L3______________________________     NK_OFF,     MS_WHLL,    MS_LEFT,    MS_DOWN,    MS_RGHT,    MS_WHLR
 #define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    X_VRSN,     QK_BOOT
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
-#define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    KC_ACL0,    KC_ACL1,    KC_ACL2,    KC_SLEP
+#define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    MS_ACL0,    MS_ACL1,    MS_ACL2,    KC_SLEP
 #define _______________________________SYS_R2______________________________     AU_OFF,     AU_ON,      KC_BRID,    KC_BRIU,    KC_MPLY,    _______
 #define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   XXXXXXX,    KC_SYRQ
 #define _______________________________SYS_R4______________________________     X_MMUTE,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______
