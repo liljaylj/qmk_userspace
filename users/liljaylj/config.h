@@ -40,6 +40,7 @@
 
 /* tap-hold configuration */
 #define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
 // #define FLOW_TAP_TERM 150
 
 #undef MOUSEKEY_INTERVAL  // workaround for mousekey redefined in moonlander.h
