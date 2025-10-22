@@ -133,9 +133,9 @@ user_config_t user_config;
 #define             __________________LOCK_R5______________________________                 XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
 
 
-#define _______________________________SYS_L1______________________________     NK_ON,      XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
+#define _______________________________SYS_L1______________________________     XXXXXXX,    XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
 #define _______________________________SYS_L2______________________________     _______,    MS_WHLU,    MS_BTN2,    MS_UP,      MS_BTN1,    MS_WHLD
-#define _______________________________SYS_L3______________________________     NK_OFF,     MS_WHLL,    MS_LEFT,    MS_DOWN,    MS_RGHT,    MS_WHLR
+#define _______________________________SYS_L3______________________________     XXXXXXX,    MS_WHLL,    MS_LEFT,    MS_DOWN,    MS_RGHT,    MS_WHLR
 #define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    X_VRSN,     QK_BOOT
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
