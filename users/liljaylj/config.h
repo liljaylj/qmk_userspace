@@ -1,5 +1,7 @@
 #pragma once
 
+#define DEBOUNCE 5
+
 // layers
 #define QWER    0   // BASE: qwerty
 #define BARE    1   // BASE: qwerty without tap-holds
@@ -42,6 +44,11 @@
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 // #define FLOW_TAP_TERM 150
+#ifdef AUTO_SHIFT_ENABLE
+#   define AUTO_SHIFT_TIMEOUT 185
+#   define NO_AUTO_SHIFT_SPECIAL
+#   define RETRO_SHIFT
+#endif
 
 #undef MOUSEKEY_INTERVAL  // workaround for mousekey redefined in moonlander.h
 #define MOUSEKEY_INTERVAL           10
@@ -52,15 +59,6 @@
 #define MOUSEKEY_WHEEL_INTERVAL     MOUSEKEY_INTERVAL
 #define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
-
-#ifdef AUTO_SHIFT_ENABLE
-#   define AUTO_SHIFT_TIMEOUT 185
-#   define NO_AUTO_SHIFT_SPECIAL
-#endif
-
-#define RETRO_SHIFT 2000
-
-#define DEBOUNCE 5
 
 #ifdef AUDIO_ENABLE
 #   define AUDIO_INIT_DELAY
