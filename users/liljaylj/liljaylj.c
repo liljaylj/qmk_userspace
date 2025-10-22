@@ -57,11 +57,13 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+uint8_t mod_state;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    mod_state = get_mods();
     switch (keycode) {
         case X_VRSN:
             if (record->event.pressed) {
-                SEND_STRING (QMK_VERSION "-" QMK_GIT_HASH " (" QMK_BUILDDATE ")");
+                SEND_STRING(QMK_VERSION "-" QMK_GIT_HASH " (" QMK_BUILDDATE ")");
                 return false;
             }
             break;
@@ -73,6 +75,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 unregister_code(KC_MUTE);
                 unregister_code(KC_LGUI);
+            }
+            break;
+        case KC_BSPC:
+            static bool delkey_registered;
+            if (record->event.pressed) {
+                if (mod_state & MOD_BIT(KC_LSFT)) {
+                    del_mods(MOD_BIT(KC_LSFT));
+                    register_code(KC_DEL);
+                    delkey_registered = true;
+                    set_mods(mod_state);
+                    return false;
+                }
+            } else {
+                if (delkey_registered) {
+                    unregister_code(KC_DEL);
+                    delkey_registered = false;
+                    return false;
+                }
             }
             break;
 #ifdef AUTO_SHIFT_ENABLE
