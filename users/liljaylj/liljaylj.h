@@ -141,6 +141,6 @@ user_config_t user_config;
 
 #define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    MS_ACL0,    MS_ACL1,    MS_ACL2,    KC_SLEP
 #define _______________________________SYS_R2______________________________     AU_OFF,     AU_ON,      KC_BRID,    KC_BRIU,    KC_MPLY,    _______
-#define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   XXXXXXX,    KC_SYRQ
+#define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   QK_MAKE,    KC_SYRQ
 #define _______________________________SYS_R4______________________________     X_MMUTE,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______
 #define             ___________________SYS_R5______________________________                 KC_MPRV,    KC_MNXT,    _______,    _______,    _______

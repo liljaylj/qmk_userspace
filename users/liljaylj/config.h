@@ -38,6 +38,12 @@
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
+#ifdef AUDIO_ENABLE
+#   define AUDIO_INIT_DELAY
+#endif
+
+#define ENABLE_COMPILE_KEYCODE
+
 #define TAPPING_TOGGLE 3  // tap 3 times to switch to layer on TT maps
 
 /* tap-hold configuration */
@@ -59,10 +65,6 @@
 #define MOUSEKEY_WHEEL_INTERVAL     MOUSEKEY_INTERVAL
 #define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
-
-#ifdef AUDIO_ENABLE
-#   define AUDIO_INIT_DELAY
-#endif
 
 #define CAPS_WORD_INVERT_ON_SHIFT
 
