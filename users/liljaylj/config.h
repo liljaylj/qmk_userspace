@@ -48,8 +48,15 @@
 
 /* tap-hold configuration */
 #define TAPPING_TERM 200
-#define PERMISSIVE_HOLD
 // #define FLOW_TAP_TERM 150
+#define PERMISSIVE_HOLD
+#define RETRO_TAPPING // send tap-key after tap term expired
+#define DUMMY_MOD_NEUTRALIZER_KEYCODE KC_RCTL
+#define MODS_TO_NEUTRALIZE { \
+    MOD_BIT(KC_LALT), MOD_BIT(KC_LGUI), \
+    MOD_BIT(KC_RALT), MOD_BIT(KC_RGUI) \
+}
+
 #ifdef AUTO_SHIFT_ENABLE
 #   define AUTO_SHIFT_TIMEOUT 185
 #   define NO_AUTO_SHIFT_SPECIAL
