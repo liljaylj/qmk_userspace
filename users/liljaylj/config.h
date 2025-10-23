@@ -46,8 +46,8 @@
 
 #define ENABLE_COMPILE_KEYCODE
 
-#define TAPPING_TOGGLE 3  // tap 3 times to switch to layer on TT maps
-
+#define TAPPING_TOGGLE 3 // tap 3 times to switch to layer on TT maps
+#define ONESHOT_TAP_TOGGLE 2  // tap 2 times on one-shot key
 /* tap-hold configuration */
 #define TAPPING_TERM 200
 // #define FLOW_TAP_TERM 150
