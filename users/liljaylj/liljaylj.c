@@ -111,7 +111,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
-        case SYM:
+        case CUR:
             clear_oneshot_mods_on_sym_layer_exit = true;
             clear_all_mods();
             oneshot_enable();
