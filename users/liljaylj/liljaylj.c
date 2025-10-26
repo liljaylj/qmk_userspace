@@ -57,6 +57,13 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+void clear_all_mods(void) {
+    clear_mods();
+    clear_oneshot_mods();
+    clear_oneshot_locked_mods();
+}
+
+static bool clear_oneshot_mods_on_sym_layer_exit = true;
 uint8_t mod_state;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     mod_state = get_mods();
@@ -96,6 +103,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     }
                 }
             }
+        case X_OSCL:
+            clear_oneshot_mods_on_sym_layer_exit = true;
+            clear_all_mods();
+            break;
+        case X_OSLV:
+            clear_oneshot_mods_on_sym_layer_exit = false;
+            break;
+        case X_OSOFF:
+            oneshot_disable();
+            clear_all_mods();
             break;
 #ifdef AUTO_SHIFT_ENABLE
         case AS_ON:
@@ -114,9 +131,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case SYM:
+            clear_oneshot_mods_on_sym_layer_exit = true;
+            oneshot_enable();
             break;
         default:
-            oneshot_disable();
+            if (clear_oneshot_mods_on_sym_layer_exit) {
+                clear_all_mods();
+            }
             break;
     }
     return state;

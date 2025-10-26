@@ -6,6 +6,9 @@
 enum custom_keycodes {
     X_VRSN = SAFE_RANGE,
     X_MMUTE,
+    X_OSCL, // clear one-shot modifiers on leave CUR layer + clear mods now
+    X_OSLV, // do not clear (leave) one-shot modifiers on leave CUR layer
+    X_OSOFF, // OS_OFF + clear mods now
 };
 
 // EEPROM
@@ -35,8 +38,8 @@ user_config_t user_config;
 #define SYMQUOT             LT(SYM,KC_QUOTE)
 #define SYMESC              LT(SYM,KC_ESC)
 
-#define CURSLSH             LT(CUR,KC_SLSH)
-#define CURZ                LT(CUR,KC_Z)
+#define CURB                LT(CUR,KC_B)
+#define CURN                LT(CUR,KC_N)
 
 #define SYMLBRC             LT(SYM,KC_LBRC)
 #define CURRBRC             LT(CUR,KC_RBRC)
@@ -58,13 +61,13 @@ user_config_t user_config;
 #define ______________________________QWER_L1______________________________     KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
 #define ______________________________QWER_L2______________________________     SYSTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
 #define ______________________________QWER_L3______________________________     SYMESC,     LSFTA,      LCTLS,      LGUID,      LALTF,      KC_G
-#define ______________________________QWER_L4______________________________     KC_LSFT,    CURZ,       KC_X,       KC_C,       KC_V,       KC_B
+#define ______________________________QWER_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       CURB
 #define ______________________________QWER_L5__________________                 KC_LCTL,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
 
 #define ______________________________QWER_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
 #define ______________________________QWER_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       SYSBSLS
 #define ______________________________QWER_R3______________________________     KC_H,       RALTJ,      RGUIK,      RCTLL,      RSFTSCLN,   SYMQUOT
-#define ______________________________QWER_R4______________________________     KC_N,       KC_M,       KC_COMM,    KC_DOT,     CURSLSH,    RSFTENT
+#define ______________________________QWER_R4______________________________     CURN,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT
 #define             __________________QWER_R5______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    KC_RCTL
 
 
@@ -107,16 +110,18 @@ user_config_t user_config;
 #define             ___________________SYM_R5______________________________                 _______,    _______,    _______,    _______,    _______
 
 
-#define _______________________________CUR_L1______________________________     KC_F13,     KC_F14,     KC_F15,     KC_F16,     KC_F17,     KC_F18
-#define _______________________________CUR_L2______________________________     XXXXXXX,    OS_OFF,     KC_HOME,    KC_UP,      KC_END,     KC_PGUP
-#define _______________________________CUR_L3______________________________     QK_LLCK,    OS_ON,      KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN
-#define _______________________________CUR_L4______________________________     _______,    _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT
+#define _______________________________CUR_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
+#define _______________________________CUR_L2______________________________     X_OSOFF,    X_OSCL,     KC_HOME,    KC_UP,      KC_END,     KC_PGUP
+#define _______________________________CUR_L3______________________________     QK_LLCK,    X_OSLV,     KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN
+#define _______________________________CUR_L4______________________________     OS_ON,      OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    _______
 #define _______________________________CUR_L5__________________                 _______,    _______,    _______,    _______,    _______
 
-#define _______________________________CUR_R1______________________________     KC_F19,     KC_F20,     KC_F21,     KC_F22,     KC_F23,     KC_F24
-#define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     OS_OFF,     XXXXXXX
-#define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    OS_ON,      QK_LLCK
-#define _______________________________CUR_R4______________________________     OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    _______,    _______
+#define _______________________________CUR_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
+#define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     X_OSCL,     X_OSOFF
+#define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_OSLV,     QK_LLCK
+#define _______________________________CUR_R4______________________________     _______,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    OS_ON
+// #define _______________________________CUR_R4______________________________     KC_NUM,     KC_CALC,    QK_LOCK,    CW_TOGG,    _______,    _______
+// TODO: `()/*-+.=<enter>` from numpad on SYM layer
 #define             ___________________CUR_R5______________________________                 _______,    _______,    _______,    _______,    _______
 
 
