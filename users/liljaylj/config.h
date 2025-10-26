@@ -52,7 +52,7 @@
 #define TAPPING_TERM 200
 // #define FLOW_TAP_TERM 150
 #define PERMISSIVE_HOLD
-#define RETRO_TAPPING // send tap-key after tap term expired
+// #define RETRO_TAPPING // send tap-key after tap term expired
 #define DUMMY_MOD_NEUTRALIZER_KEYCODE KC_RCTL
 #define MODS_TO_NEUTRALIZE { \
     MOD_BIT(KC_LALT), MOD_BIT(KC_LGUI), \
