@@ -53,7 +53,7 @@ user_config_t user_config;
 // middle button(s) function on SYM layer
 #define SYMMID              _______
 // middle button(s) function on CUR layer
-#define CURMID              KC_UNDS
+#define CURMID              QK_LLCK
 // middle button(s) function on SYS layer
 #define SYSMID              KC_MPLY
 
