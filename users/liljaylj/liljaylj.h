@@ -111,14 +111,14 @@ user_config_t user_config;
 
 
 #define _______________________________CUR_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
-#define _______________________________CUR_L2______________________________     X_OSOFF,    X_OSCL,     KC_HOME,    KC_UP,      KC_END,     KC_PGUP
-#define _______________________________CUR_L3______________________________     QK_LLCK,    X_OSLV,     KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN
-#define _______________________________CUR_L4______________________________     OS_ON,      OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    _______
+#define _______________________________CUR_L2______________________________     OS_ON,      X_OSOFF,    KC_HOME,    KC_UP,      KC_END,     KC_PGUP
+#define _______________________________CUR_L3______________________________     X_OSCL,     X_OSLV,     KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN
+#define _______________________________CUR_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    _______
 #define _______________________________CUR_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________CUR_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
-#define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     X_OSCL,     X_OSOFF
-#define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_OSLV,     QK_LLCK
+#define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     X_OSOFF,    OS_ON
+#define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_OSLV,     X_OSCL
 #define _______________________________CUR_R4______________________________     _______,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    OS_ON
 // #define _______________________________CUR_R4______________________________     KC_NUM,     KC_CALC,    QK_LOCK,    CW_TOGG,    _______,    _______
 // TODO: `()/*-+.=<enter>` from numpad on SYM layer
