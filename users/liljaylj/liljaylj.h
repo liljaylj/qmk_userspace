@@ -98,13 +98,13 @@ user_config_t user_config;
 
 
 #define _______________________________SYM_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
-#define _______________________________SYM_L2______________________________     KC_CAPS,    CW_TOGG,    XXXXXXX,    KC_LBRC,    KC_RBRC,    KC_GRV
+#define _______________________________SYM_L2______________________________     KC_SCRL,    KC_CAPS,    CW_TOGG,    KC_LBRC,    KC_RBRC,    KC_GRV
 #define _______________________________SYM_L3______________________________     _______,    XXXXXXX,    KC_PIPE,    KC_LCBR,    KC_RCBR,    XXXXXXX
 #define _______________________________SYM_L4______________________________     _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
 #define _______________________________SYM_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________SYM_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
-#define _______________________________SYM_R2______________________________     XXXXXXX,    KC_LT,      KC_GT,      KC_PLUS,    KC_UNDS,    KC_SCRL
+#define _______________________________SYM_R2______________________________     XXXXXXX,    KC_LT,      KC_GT,      KC_PLUS,    KC_UNDS,    XXXXXXX
 #define _______________________________SYM_R3______________________________     KC_INS,     KC_LPRN,    KC_RPRN,    KC_EQL,     KC_MINS,    _______
 #define _______________________________SYM_R4______________________________     KC_BSPC,    KC_DEL,     KC_TILD,    KC_EXLM,    KC_QUES,    _______
 #define             ___________________SYM_R5______________________________                 _______,    _______,    _______,    _______,    _______
