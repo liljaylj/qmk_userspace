@@ -98,14 +98,14 @@ user_config_t user_config;
 
 
 #define _______________________________SYM_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
-#define _______________________________SYM_L2______________________________     KC_TAB,     KC_CAPS,    KC_BSLS,    KC_LBRC,    KC_RBRC,    KC_GRV
-#define _______________________________SYM_L3______________________________     _______,    KC_SLSH,    KC_PIPE,    KC_LCBR,    KC_RCBR,    KC_DLR
-#define _______________________________SYM_L4______________________________     _______,    KC_INS,     KC_AMPR,    KC_ESC,     KC_SCLN,    KC_QUOT
+#define _______________________________SYM_L2______________________________     KC_CAPS,    CW_TOGG,    XXXXXXX,    KC_LBRC,    KC_RBRC,    KC_GRV
+#define _______________________________SYM_L3______________________________     _______,    XXXXXXX,    KC_PIPE,    KC_LCBR,    KC_RCBR,    XXXXXXX
+#define _______________________________SYM_L4______________________________     _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
 #define _______________________________SYM_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________SYM_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
-#define _______________________________SYM_R2______________________________     KC_SCRL,    KC_LT,      KC_GT,      KC_PLUS,    KC_UNDS,    KC_BSLS
-#define _______________________________SYM_R3______________________________     KC_HASH,    KC_LPRN,    KC_RPRN,    KC_EQL,     KC_MINS,    _______
+#define _______________________________SYM_R2______________________________     XXXXXXX,    KC_LT,      KC_GT,      KC_PLUS,    KC_UNDS,    KC_SCRL
+#define _______________________________SYM_R3______________________________     KC_INS,     KC_LPRN,    KC_RPRN,    KC_EQL,     KC_MINS,    _______
 #define _______________________________SYM_R4______________________________     KC_BSPC,    KC_DEL,     KC_TILD,    KC_EXLM,    KC_QUES,    _______
 #define             ___________________SYM_R5______________________________                 _______,    _______,    _______,    _______,    _______
 
@@ -120,8 +120,6 @@ user_config_t user_config;
 #define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     X_OSOFF,    OS_ON
 #define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_OSLV,     X_OSCL
 #define _______________________________CUR_R4______________________________     _______,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    OS_ON
-// #define _______________________________CUR_R4______________________________     KC_NUM,     KC_CALC,    QK_LOCK,    CW_TOGG,    _______,    _______
-// TODO: `()/*-+.=<enter>` from numpad on SYM layer
 #define             ___________________CUR_R5______________________________                 _______,    _______,    _______,    _______,    _______
 
 
