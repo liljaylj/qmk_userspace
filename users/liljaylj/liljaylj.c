@@ -113,6 +113,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case SYM:
             clear_oneshot_mods_on_sym_layer_exit = true;
+            clear_all_mods();
             oneshot_enable();
             break;
         default:
