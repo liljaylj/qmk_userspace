@@ -135,7 +135,7 @@ user_config_t user_config;
 #define ______________________________MAUS_L5__________________                 _______,    _______,    _______,    XXXXXXX,    XXXXXXX
 
 #define ______________________________MAUS_R1______________________________     MS_ACL0,    MS_ACL1,    MS_ACL2,    XXXXXXX,    XXXXXXX,    XXXXXXX
-#define ______________________________MAUS_R2______________________________     _______,    MS_BTN1,    MS_BTN2,    MS_BTN3,    XXXXXXX,    XXXXXXX
+#define ______________________________MAUS_R2______________________________     _______,    MS_BTN1,    MS_BTN2,    MS_BTN3,    MS_BTN4,    MS_BTN5
 #define ______________________________MAUS_R3______________________________     MS_WHLL,    MS_WHLD,    MS_WHLU,    MS_WHLR,    X_MSAV,     X_MCLR
 #define ______________________________MAUS_R4______________________________     QK_LOCK,    KC_RALT,    KC_RGUI,    KC_RCTL,    KC_RSFT,    _______
 #define             __________________MAUS_R5______________________________                 XXXXXXX,    XXXXXXX,    _______,    _______,    _______
