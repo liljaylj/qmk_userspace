@@ -41,6 +41,9 @@ user_config_t user_config;
 #define CURB                LT(CUR,KC_B)
 #define CURN                LT(CUR,KC_N)
 
+#define MAUST               LT(MAUS,KC_T)
+#define MAUSY               LT(MAUS,KC_Y)
+
 #define SYMLBRC             LT(SYM,KC_LBRC)
 #define CURRBRC             LT(CUR,KC_RBRC)
 
@@ -54,18 +57,20 @@ user_config_t user_config;
 #define SYMMID              _______
 // middle button(s) function on CUR layer
 #define CURMID              QK_LLCK
+// middle button(s) function on MAUS layer
+#define MAUSMID             QK_LLCK
 // middle button(s) function on SYS layer
 #define SYSMID              KC_MPLY
 
 
 #define ______________________________QWER_L1______________________________     KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5
-#define ______________________________QWER_L2______________________________     SYSTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T
+#define ______________________________QWER_L2______________________________     SYSTAB,     KC_Q,       KC_W,       KC_E,       KC_R,       MAUST
 #define ______________________________QWER_L3______________________________     SYMESC,     LSFTA,      LCTLS,      LGUID,      LALTF,      KC_G
 #define ______________________________QWER_L4______________________________     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       CURB
 #define ______________________________QWER_L5__________________                 KC_LCTL,    KC_LGUI,    KC_LALT,    TL_LOWR,    TL_UPPR
 
 #define ______________________________QWER_R1______________________________     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_BSPC
-#define ______________________________QWER_R2______________________________     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       SYSBSLS
+#define ______________________________QWER_R2______________________________     MAUSY,      KC_U,       KC_I,       KC_O,       KC_P,       SYSBSLS
 #define ______________________________QWER_R3______________________________     KC_H,       RALTJ,      RGUIK,      RCTLL,      RSFTSCLN,   SYMQUOT
 #define ______________________________QWER_R4______________________________     CURN,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    RSFTENT
 #define             __________________QWER_R5______________________________                 SYMLBRC,    CURRBRC,    KC_RALT,    KC_RGUI,    KC_RCTL
@@ -119,8 +124,21 @@ user_config_t user_config;
 #define _______________________________CUR_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
 #define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     X_OSOFF,    OS_ON
 #define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_OSLV,     X_OSCL
-#define _______________________________CUR_R4______________________________     _______,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    OS_ON
+#define _______________________________CUR_R4______________________________     _______,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    _______
 #define             ___________________CUR_R5______________________________                 _______,    _______,    _______,    _______,    _______
+
+
+#define ______________________________MAUS_L1______________________________     XXXXXXX,    XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
+#define ______________________________MAUS_L2______________________________     OS_ON,      X_OSOFF,    MS_BTN2,    MS_UP,      MS_BTN1,    _______
+#define ______________________________MAUS_L3______________________________     X_OSCL,     X_OSLV,     MS_LEFT,    MS_DOWN,    MS_RGHT,    XXXXXXX
+#define ______________________________MAUS_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    QK_LOCK
+#define ______________________________MAUS_L5__________________                 _______,    _______,    _______,    XXXXXXX,    XXXXXXX
+
+#define ______________________________MAUS_R1______________________________     MS_ACL0,    MS_ACL1,    MS_ACL2,    XXXXXXX,    XXXXXXX,    XXXXXXX
+#define ______________________________MAUS_R2______________________________     _______,    MS_BTN1,    MS_BTN2,    MS_BTN3,    X_OSOFF,    OS_ON
+#define ______________________________MAUS_R3______________________________     MS_WHLL,    MS_WHLD,    MS_WHLU,    MS_WHLR,    X_OSLV,     X_OSCL
+#define ______________________________MAUS_R4______________________________     XXXXXXX,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    _______
+#define             __________________MAUS_R5______________________________                 XXXXXXX,    XXXXXXX,    _______,    _______,    _______
 
 
 #define ______________________________LOCK_L1______________________________     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
@@ -136,13 +154,13 @@ user_config_t user_config;
 #define             __________________LOCK_R5______________________________                 XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
 
 
-#define _______________________________SYS_L1______________________________     XXXXXXX,    XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
-#define _______________________________SYS_L2______________________________     _______,    MS_WHLU,    MS_BTN2,    MS_UP,      MS_BTN1,    MS_WHLD
-#define _______________________________SYS_L3______________________________     XXXXXXX,    MS_WHLL,    MS_LEFT,    MS_DOWN,    MS_RGHT,    MS_WHLR
+#define _______________________________SYS_L1______________________________     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
+#define _______________________________SYS_L2______________________________     _______,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
+#define _______________________________SYS_L3______________________________     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
 #define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    X_VRSN,     QK_BOOT
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
-#define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    MS_ACL0,    MS_ACL1,    MS_ACL2,    KC_SLEP
+#define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_SLEP
 #define _______________________________SYS_R2______________________________     AU_OFF,     AU_ON,      KC_BRID,    KC_BRIU,    KC_MPLY,    _______
 #define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   QK_MAKE,    KC_SYRQ
 #define _______________________________SYS_R4______________________________     X_MMUTE,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______

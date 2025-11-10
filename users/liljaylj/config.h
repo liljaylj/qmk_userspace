@@ -9,8 +9,9 @@
 #define ERAB    2   // mirror of BARE
 #define SYM     3   // symbols
 #define CUR     4   // cursor keys and numpad
-#define LOCK    5   // lock the keyboard
-#define SYS     6   // system keys (qmk/media/etc.)
+#define MAUS    5   // cursor keys and numpad
+#define LOCK    6   // lock the keyboard
+#define SYS     7   // system keys (qmk/media/etc.)
 
 // tri layer
 #define TRI_LAYER_LOWER_LAYER   SYM
@@ -65,6 +66,7 @@
 #   define RETRO_SHIFT
 #endif
 
+#define MK_COMBINED  // combined mode (accelerated + constant acl0,1,2)
 #undef MOUSEKEY_INTERVAL  // workaround for mousekey redefined in moonlander.h
 #define MOUSEKEY_INTERVAL           10
 #define MOUSEKEY_DELAY              0
