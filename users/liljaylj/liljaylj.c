@@ -61,6 +61,7 @@ void clear_all_mods(void) {
     clear_mods();
     clear_oneshot_mods();
     clear_oneshot_locked_mods();
+    send_keyboard_report();
 }
 
 static bool clear_oneshot_mods_on_sym_layer_exit = true;
