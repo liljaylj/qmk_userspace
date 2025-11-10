@@ -6,8 +6,8 @@
 enum custom_keycodes {
     X_VRSN = SAFE_RANGE,
     X_MMUTE,
-    X_OSCL, // clear one-shot modifiers on leave CUR layer + clear mods now
-    X_OSLV, // do not clear (leave) one-shot modifiers on leave CUR layer
+    X_MCLR, // clear one-shot modifiers on leave CUR layer + clear mods now
+    X_MSAV, // do not clear (leave) one-shot modifiers on leave CUR layer
     X_OSOFF, // OS_OFF + clear mods now
 };
 
@@ -117,27 +117,27 @@ user_config_t user_config;
 
 #define _______________________________CUR_L1______________________________     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6
 #define _______________________________CUR_L2______________________________     OS_ON,      X_OSOFF,    KC_HOME,    KC_UP,      KC_END,     KC_PGUP
-#define _______________________________CUR_L3______________________________     X_OSCL,     X_OSLV,     KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN
+#define _______________________________CUR_L3______________________________     X_MCLR,     X_MSAV,     KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN
 #define _______________________________CUR_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    _______
 #define _______________________________CUR_L5__________________                 _______,    _______,    _______,    _______,    _______
 
 #define _______________________________CUR_R1______________________________     KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12
 #define _______________________________CUR_R2______________________________     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     X_OSOFF,    OS_ON
-#define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_OSLV,     X_OSCL
+#define _______________________________CUR_R3______________________________     KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    X_MSAV,     X_MCLR
 #define _______________________________CUR_R4______________________________     _______,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    _______
 #define             ___________________CUR_R5______________________________                 _______,    _______,    _______,    _______,    _______
 
 
 #define ______________________________MAUS_L1______________________________     XXXXXXX,    XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
-#define ______________________________MAUS_L2______________________________     OS_ON,      X_OSOFF,    MS_BTN2,    MS_UP,      MS_BTN1,    _______
-#define ______________________________MAUS_L3______________________________     X_OSCL,     X_OSLV,     MS_LEFT,    MS_DOWN,    MS_RGHT,    XXXXXXX
-#define ______________________________MAUS_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    QK_LOCK
+#define ______________________________MAUS_L2______________________________     XXXXXXX,    XXXXXXX,    MS_BTN2,    MS_UP,      MS_BTN1,    _______
+#define ______________________________MAUS_L3______________________________     X_MCLR,     X_MSAV,     MS_LEFT,    MS_DOWN,    MS_RGHT,    XXXXXXX
+#define ______________________________MAUS_L4______________________________     _______,    KC_LSFT,    KC_LCTL,    KC_LGUI,    KC_LALT,    QK_LOCK
 #define ______________________________MAUS_L5__________________                 _______,    _______,    _______,    XXXXXXX,    XXXXXXX
 
 #define ______________________________MAUS_R1______________________________     MS_ACL0,    MS_ACL1,    MS_ACL2,    XXXXXXX,    XXXXXXX,    XXXXXXX
-#define ______________________________MAUS_R2______________________________     _______,    MS_BTN1,    MS_BTN2,    MS_BTN3,    X_OSOFF,    OS_ON
-#define ______________________________MAUS_R3______________________________     MS_WHLL,    MS_WHLD,    MS_WHLU,    MS_WHLR,    X_OSLV,     X_OSCL
-#define ______________________________MAUS_R4______________________________     XXXXXXX,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    _______
+#define ______________________________MAUS_R2______________________________     _______,    MS_BTN1,    MS_BTN2,    MS_BTN3,    XXXXXXX,    XXXXXXX
+#define ______________________________MAUS_R3______________________________     MS_WHLL,    MS_WHLD,    MS_WHLU,    MS_WHLR,    X_MSAV,     X_MCLR
+#define ______________________________MAUS_R4______________________________     QK_LOCK,    KC_RALT,    KC_RGUI,    KC_RCTL,    KC_RSFT,    _______
 #define             __________________MAUS_R5______________________________                 XXXXXXX,    XXXXXXX,    _______,    _______,    _______
 
 

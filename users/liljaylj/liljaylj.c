@@ -61,10 +61,11 @@ void clear_all_mods(void) {
     clear_mods();
     clear_oneshot_mods();
     clear_oneshot_locked_mods();
+    cancel_key_lock();
     send_keyboard_report();
 }
 
-static bool clear_oneshot_mods_on_sym_layer_exit = true;
+static bool clear_all_mods_on_layer_exit = true;
 uint8_t mod_state;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     mod_state = get_mods();
@@ -85,12 +86,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(KC_LGUI);
             }
             break;
-        case X_OSCL:
-            clear_oneshot_mods_on_sym_layer_exit = true;
+        case X_MCLR:
+            clear_all_mods_on_layer_exit = true;
             clear_all_mods();
             break;
-        case X_OSLV:
-            clear_oneshot_mods_on_sym_layer_exit = false;
+        case X_MSAV:
+            clear_all_mods_on_layer_exit = false;
             break;
         case X_OSOFF:
             oneshot_disable();
@@ -114,12 +115,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case CUR:
         case MAUS:
-            clear_oneshot_mods_on_sym_layer_exit = true;
+            clear_all_mods_on_layer_exit = true;
             clear_all_mods();
             oneshot_enable();
             break;
         default:
-            if (clear_oneshot_mods_on_sym_layer_exit) {
+            if (clear_all_mods_on_layer_exit) {
                 clear_all_mods();
             }
             break;
