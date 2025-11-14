@@ -129,9 +129,9 @@ user_config_t user_config;
 
 
 #define ______________________________MAUS_L1______________________________     XXXXXXX,    XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
-#define ______________________________MAUS_L2______________________________     XXXXXXX,    XXXXXXX,    MS_BTN2,    MS_UP,      MS_BTN1,    _______
-#define ______________________________MAUS_L3______________________________     X_MCLR,     X_MSAV,     MS_LEFT,    MS_DOWN,    MS_RGHT,    XXXXXXX
-#define ______________________________MAUS_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    XXXXXXX
+#define ______________________________MAUS_L2______________________________     MS_WHLL,    MS_WHLR,    MS_BTN2,    MS_UP,      MS_BTN1,    _______
+#define ______________________________MAUS_L3______________________________     X_MCLR,     X_MSAV,     MS_LEFT,    MS_DOWN,    MS_RGHT,    MS_WHLU
+#define ______________________________MAUS_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    MS_WHLD
 #define ______________________________MAUS_L5__________________                 _______,    _______,    _______,    XXXXXXX,    XXXXXXX
 
 #define ______________________________MAUS_R1______________________________     MS_ACL0,    MS_ACL1,    MS_ACL2,    XXXXXXX,    XXXXXXX,    XXXXXXX
