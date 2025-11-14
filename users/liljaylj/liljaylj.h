@@ -131,13 +131,13 @@ user_config_t user_config;
 #define ______________________________MAUS_L1______________________________     XXXXXXX,    XXXXXXX,    MS_BTN4,    MS_BTN3,    MS_BTN5,    XXXXXXX
 #define ______________________________MAUS_L2______________________________     XXXXXXX,    XXXXXXX,    MS_BTN2,    MS_UP,      MS_BTN1,    _______
 #define ______________________________MAUS_L3______________________________     X_MCLR,     X_MSAV,     MS_LEFT,    MS_DOWN,    MS_RGHT,    XXXXXXX
-#define ______________________________MAUS_L4______________________________     _______,    KC_LSFT,    KC_LCTL,    KC_LGUI,    KC_LALT,    QK_LOCK
+#define ______________________________MAUS_L4______________________________     _______,    OS_LSFT,    OS_LCTL,    OS_LGUI,    OS_LALT,    XXXXXXX
 #define ______________________________MAUS_L5__________________                 _______,    _______,    _______,    XXXXXXX,    XXXXXXX
 
 #define ______________________________MAUS_R1______________________________     MS_ACL0,    MS_ACL1,    MS_ACL2,    XXXXXXX,    XXXXXXX,    XXXXXXX
 #define ______________________________MAUS_R2______________________________     _______,    MS_BTN1,    MS_BTN2,    MS_BTN3,    MS_BTN4,    MS_BTN5
 #define ______________________________MAUS_R3______________________________     MS_WHLL,    MS_WHLD,    MS_WHLU,    MS_WHLR,    X_MSAV,     X_MCLR
-#define ______________________________MAUS_R4______________________________     QK_LOCK,    KC_RALT,    KC_RGUI,    KC_RCTL,    KC_RSFT,    _______
+#define ______________________________MAUS_R4______________________________     XXXXXXX,    OS_RALT,    OS_RGUI,    OS_RCTL,    OS_RSFT,    _______
 #define             __________________MAUS_R5______________________________                 XXXXXXX,    XXXXXXX,    _______,    _______,    _______
 
 

@@ -62,7 +62,6 @@ void clear_all_mods(void) {
     del_mods(mods);
     clear_oneshot_mods();
     clear_oneshot_locked_mods();
-    cancel_key_lock();
     send_keyboard_report();
 }
 
