@@ -58,7 +58,8 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 }
 
 void clear_all_mods(void) {
-    clear_mods();
+    uint8_t mods = get_oneshot_mods() | get_oneshot_locked_mods();
+    del_mods(mods);
     clear_oneshot_mods();
     clear_oneshot_locked_mods();
     cancel_key_lock();
