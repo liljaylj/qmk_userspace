@@ -49,6 +49,7 @@
 
 #define TAPPING_TOGGLE 3 // tap 3 times to switch to layer on TT maps
 #define ONESHOT_TAP_TOGGLE 2  // tap 2 times on one-shot key
+#define ONESHOT_TIMEOUT 5000
 /* tap-hold configuration */
 #define TAPPING_TERM 200
 // #define FLOW_TAP_TERM 150
@@ -78,5 +79,6 @@
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
 
 #define CAPS_WORD_INVERT_ON_SHIFT
+#define CAPS_WORD_IDLE_TIMEOUT 5000
 
 #define ORYX_CONFIGURATOR
