@@ -160,7 +160,7 @@ user_config_t user_config;
 #define _______________________________SYS_L4______________________________     _______,    DF(QWER),   DF(BARE),   XXXXXXX,    X_VRSN,     QK_BOOT
 #define _______________________________SYS_L5__________________                 _______,    _______,    _______,    KC_VOLD,    KC_VOLU
 
-#define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_SLEP
+#define _______________________________SYS_R1______________________________     KC_BRK,     XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_SLEP,    XXXXXXX
 #define _______________________________SYS_R2______________________________     AU_OFF,     AU_ON,      KC_BRID,    KC_BRIU,    KC_MPLY,    _______
 #define _______________________________SYS_R3______________________________     KC_NUM,     KC_CAPS,    KC_SCRL,    TG(LOCK),   QK_MAKE,    KC_SYRQ
 #define _______________________________SYS_R4______________________________     X_MMUTE,    KC_MUTE,    KC_VOLD,    KC_VOLU,    KC_PSCR,    _______
